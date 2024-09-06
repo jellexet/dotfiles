@@ -1,0 +1,204 @@
+{
+    "layer": "top",
+    "position": "top",
+
+    // Modules on the left side
+    "modules-left": [
+        "hyprland/mode",
+        "custom/arrow10",
+        "hyprland/window"
+    ],
+
+    // Modules in the center
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+
+    // Modules on the right side
+    "modules-right": [
+        "custom/arrow9",
+        "pulseaudio",
+        "custom/arrow8",
+        "network",
+        "custom/arrow7",
+        "memory",
+        "custom/arrow6",
+        "cpu",
+        "custom/arrow5",
+        "hyprland/language",
+        "custom/arrow4",
+        "tray",
+        "clock#date",
+        "custom/arrow3",
+        "clock#time",
+        "custom/arrow2",
+        "idle_inhibitor",
+        "custom/arrow1",
+        "custom/power"
+    ],
+
+    // Clock module (time)
+    "clock#time": {
+        "interval": 10,
+        "format": "{:%H:%M}",
+        "tooltip": false
+    },
+
+    // Clock module (date)
+    "clock#date": {
+        "interval": 20,
+        "format": "{:%e %b %Y}",
+        "tooltip": false
+    },
+
+    // CPU usage module
+    "cpu": {
+        "interval": 5,
+        "tooltip": false,
+        "format": " {usage}%",
+        "format-alt": " {load}",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
+
+    // Language switcher
+    "hyprland/language": {
+        "format": " {}",
+        "min-length": 5,
+        "on-click": "hyprlandmsg 'input * xkb_switch_layout next'",
+        "tooltip": false
+    },
+
+    // Memory usage module
+    "memory": {
+        "interval": 5,
+        "format": " {used:0.1f}G/{total:0.1f}G",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        },
+        "tooltip": false
+    },
+
+    // Network module
+    "network": {
+        "interval": 5,
+        "format-wifi": " {essid} ({signalStrength}%)",
+        "format-ethernet": " {ifname}",
+        "format-disconnected": "No connection",
+        "format-alt": " {ipaddr}/{cidr}",
+        "tooltip": false
+    },
+
+    // Mode module
+    "hyprland/mode": {
+        "format": "{}",
+        "tooltip": false
+    },
+
+    // Active window title module
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 30,
+        "tooltip": false
+    },
+
+    // Workspaces module with custom icons
+    "hyprland/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": true,
+        "show-special": true,
+        "on-scroll-up": "hyprctl dispatch workspace +1",
+        "on-scroll-down": "hyprctl dispatch workspace -1",
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "1": "•",
+            "2": "•",
+            "3": "•",
+            "4": "•",
+            "5": "•",
+            "default": "•",   // Icon for unused workspaces
+            "active": "󰮯"   // Icon for active workspaces (Pacman ghost symbol)
+        },
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        },
+        "sort-by-number": true
+    },
+
+    // Pulseaudio module
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 1,
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "tooltip": false
+    },
+
+    // Temperature module
+    "temperature": {
+        "critical-threshold": 90,
+        "interval": 5,
+        "format": "{icon} {temperatureC}°",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tooltip": false
+    },
+
+    // Tray module
+    "tray": {
+        "icon-size": 18
+    },
+    
+    "idle_inhibitor": {
+        "tooltip": false,
+        "format": "{icon}",
+        "start-activated": false,
+        "format-icons": {
+            "activated": " ",
+            "deactivated": " "
+        }
+    },
+    
+    // Custom power button
+    "custom/power": {
+        "format": "⏻",
+        "tooltip": false,
+        "on-click": "wlogout -b 5 --protocol layer-shell"
+    },
+
+    // Custom arrow separators
+    "custom/arrow1": { "format": "", "tooltip": false },
+    "custom/arrow2": { "format": "", "tooltip": false },
+    "custom/arrow3": { "format": "", "tooltip": false },
+    "custom/arrow4": { "format": "", "tooltip": false },
+    "custom/arrow5": { "format": "", "tooltip": false },
+    "custom/arrow6": { "format": "", "tooltip": false },
+    "custom/arrow7": { "format": "", "tooltip": false },
+    "custom/arrow8": { "format": "", "tooltip": false },
+    "custom/arrow9": { "format": "", "tooltip": false },
+    "custom/arrow10": { "format": "", "tooltip": false }
+}
+	
