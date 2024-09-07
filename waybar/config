@@ -4,7 +4,6 @@
 
     // Modules on the left side
     "modules-left": [
-        "hyprland/mode",
         "custom/arrow10",
         "hyprland/window"
     ],
@@ -93,14 +92,10 @@
     },
 
     // Mode module
-    "hyprland/mode": {
-        "format": "{}",
-        "tooltip": false
-    },
 
     // Active window title module
     "hyprland/window": {
-        "format": "{}",
+        "format": "{title}",
         "max-length": 30,
         "tooltip": false
     },
@@ -171,7 +166,7 @@
     "tray": {
         "icon-size": 18
     },
-    
+
     "idle_inhibitor": {
         "tooltip": false,
         "format": "{icon}",
@@ -181,7 +176,7 @@
             "deactivated": " "
         }
     },
-    
+
     // Custom power button
     "custom/power": {
         "format": "⏻",
@@ -201,4 +196,4 @@
     "custom/arrow9": { "format": "", "tooltip": false },
     "custom/arrow10": { "format": "", "tooltip": false }
 }
-	
+

@@ -3,7 +3,7 @@
 @keyframes blink-critical {
 	to {
 		/*color: @white;*/
-		background-color: @critical;
+		color: @critical;
 	}
 }
 
@@ -55,7 +55,7 @@
 	padding: 0;
 	box-shadow: none;
 	text-shadow: none;
-	icon-shadow: none;
+	-gtk-icon-shadow: none;
 }
 
 /* The whole bar */
@@ -189,6 +189,7 @@
 
 #tray {
 	background: @date;
+    color: @black;
 }
 
 #clock.date {
@@ -198,7 +199,7 @@
 
 #clock.time {
 	background: @time;
-	color: @black;
+	color: @white;
 }
 
 #custom-power{
