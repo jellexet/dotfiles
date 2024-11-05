@@ -23,6 +23,7 @@
         "memory",
         "custom/arrow6",
         "cpu",
+        "custom/gpu",
         "custom/arrow5",
         "hyprland/language",
         "custom/arrow4",
@@ -56,6 +57,18 @@
         "tooltip": false,
         "format": " {usage}%",
         "format-alt": " {load}",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
+
+    // GPU usage module
+    "custom/gpu": {
+        "interval": 5,
+        "tooltip": false,
+        "exec": "nvidia-smi | grep -oP '(\\d+%)(?=\\s+Default)' | head -n 1",
+        "format": " {}",
         "states": {
             "warning": 70,
             "critical": 90
@@ -132,7 +145,7 @@
     "pulseaudio": {
         "format": "{icon} {volume}%",
         "format-bluetooth": "{icon} {volume}%",
-        "format-muted": "",
+        "format-muted": "",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -140,7 +153,7 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", ""]
+            "default": ["", ""]
         },
         "scroll-step": 1,
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",

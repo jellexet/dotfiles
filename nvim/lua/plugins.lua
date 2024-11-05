@@ -2,7 +2,7 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
   use 'akinsho/bufferline.nvim'
-  use 'nvim-tree/nvim-web-devicons' 
+  use 'nvim-tree/nvim-web-devicons'
   use 'numToStr/Comment.nvim'
   use 'L3MON4D3/LuaSnip'
   use 'hrsh7th/cmp-buffer'
@@ -26,5 +26,5 @@ return require('packer').startup(function(use)
   use 'ap/vim-css-color'
   use 'szw/vim-maximizer'
   use { 'prettier/vim-prettier', run = 'yarn install' }
-
+  use { 'rose-pine/neovim', as = 'rose-pine' }
 end)

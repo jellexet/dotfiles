@@ -5,8 +5,9 @@ if has('termguicolors')
     set termguicolors
 endif
 set background=dark
-let g:gruvbox_material_background = 'soft'
-colorscheme gruvbox-material
+"let g:gruvbox_material_background = 'soft'
+"colorscheme gruvbox-material
+colorscheme rose-pine
 
 highlight Normal ctermbg=NONE guibg=NONE
 " let g:copilot_node_command = '/home/mshehu/.nvm/versions/node/v17.9.0/bin/node'

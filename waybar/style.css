@@ -1,50 +1,39 @@
 /* Keyframes */
+@import "./rose-pine/rose-pine.css";
 
 @keyframes blink-critical {
 	to {
-		/*color: @white;*/
 		color: @critical;
 	}
 }
 
-
 /* Styles */
 
-/* Colors (gruvbox) */
-@define-color black	#282828;
-@define-color red	#cc241d;
-@define-color green	#98971a;
-@define-color yellow	#d79921;
-@define-color blue	#458588;
-@define-color purple	#b16286;
-@define-color aqua	#689d6a;
-@define-color gray	#a89984;
-@define-color brgray	#928374;
-@define-color brred	#fb4934;
-@define-color brgreen	#b8bb26;
-@define-color bryellow	#fabd2f;
-@define-color brblue	#83a598;
-@define-color brpurple	#d3869b;
-@define-color braqua	#8ec07c;
-@define-color white	#ebdbb2;
-@define-color bg2	#504945;
+/* Added colors to match Rosé Pine */
+@define-color blush           #e5a3b3;
+@define-color moss            #6a9b8d;
+@define-color dawn            #ffdfbf;
+@define-color twilight        #b7b0e8;
 
+@define-color highlightLow    #21202e;
+@define-color highlightMed    #403d52;
+@define-color highlightHigh   #524f67;
 
-@define-color warning 	@bryellow;
-@define-color critical	@red;
-@define-color mode	@black;
-@define-color unfocused	@bg2;
-@define-color focused	@braqua;
-@define-color inactive	@purple;
-@define-color sound	@brpurple;
-@define-color network	@purple;
-@define-color memory	@braqua;
-@define-color cpu	@green;
-@define-color layout	@brgreen;
-@define-color date @bryellow;
-@define-color time	@aqua;
-@define-color idle	@black;
-@define-color power	@white;
+@define-color warning         @gold;
+@define-color critical        @love;
+@define-color mode            @base;
+@define-color unfocused       @overlay;
+@define-color focused         @pine;
+@define-color inactive        @iris;
+@define-color sound           @pine;
+@define-color network         @moss;
+@define-color memory          @foam;
+@define-color cpu             @iris;
+@define-color layout          @gold;
+@define-color date            @rose;
+@define-color time            @blush;
+@define-color idle            @dawn;
+@define-color power           @twilight;
 
 /* Reset all styles */
 * {
@@ -60,11 +49,10 @@
 
 /* The whole bar */
 #waybar {
-	background: rgba(40, 40, 40, 0.8784313725); /* #282828e0 */
-	color: @white;
+	background: rgba(25, 23, 36, 0.9); /* base color with opacity */
+	color: @text;
 	font-family: JetBrains Mono, Siji;
 	font-size: 10pt;
-	/*font-weight: bold;*/
 }
 
 /* Each module */
@@ -89,7 +77,7 @@
 #mode,
 #memory.critical,
 #cpu.critical,
-#temperature.critical{
+#temperature.critical {
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
@@ -105,45 +93,37 @@
 	color: @warning;
 }
 
-/* And now modules themselves in their respective order */
-
-/* Current sway mode (resize etc) */
+/* Modules in their respective order */
 #mode {
-	color: @white;
+	color: @text;
 	background: @mode;
 }
 
-/* Workspaces stuff */
 #workspaces button {
-	/*font-weight: bold;*/
 	font-size: 14pt;
 	padding-left: 2pt;
 	padding-right: 2pt;
-	color: @white;
-	background: @black;
+	color: @text;
+	background: @base;
 }
 
-/* Inactive (on unfocused output) */
 #workspaces button.visible {
-	color: @white;
-	background: @black;
+	color: @text;
+	background: @base;
 }
 
-/* Active (on focused output) */
 #workspaces button.focused {
-	color: @black;
+	color: @base;
 	background: @focused;
 }
 
-/* Contains an urgent window */
 #workspaces button.urgent {
-	color: @black;
+	color: @base;
 	background: @warning;
 }
 
-/* Style when cursor is on the button */
 #workspaces button:hover {
-  color: @black;
+	color: @base;
 	background: @focused;
 }
 
@@ -153,61 +133,68 @@
 }
 
 #idle_inhibitor {
-  background: @idle;
-  color: @white;
+	background: @idle;
+	color: @base;
 }
 
 #pulseaudio {
 	background: @sound;
-	color: @black;
+	color: @base;
 }
 
 #network {
 	background: @network;
-	color: @white;
+	color: @base;
 }
 
 #memory {
 	background: @memory;
-	color: @black;
+	color: @base;
 }
 
 #cpu {
 	background: @cpu;
-	color: @white;
+	color: @base;
 }
 
 #temperature {
-	background: @temp;
-	color: @black;
+	background: @iris;
+	color: @base;
 }
 
 #language {
 	background: @layout;
-	color: @black;
+	color: @base;
 }
 
 #tray {
 	background: @date;
-    color: @black;
+	color: @base;
 }
 
 #clock.date {
 	background: @date;
-	color: @black;
+	color: @base;
 }
 
 #clock.time {
 	background: @time;
-	color: @white;
+	color: @base;
 }
 
-#custom-power{
-  font-size: 14pt;
-  background: @power;
-  color: @black;
+#custom-gpu {
+  background: @cpu;
+  color: @base;
   padding-left: 8pt;
-  padding-right: 16pt;
+	padding-right: 8pt;
+}
+
+#custom-power {
+	font-size: 14pt;
+	background: @power;
+	color: @base;
+	padding-left: 8pt;
+	padding-right: 16pt;
 }
 
 #custom-arrow1 {
@@ -261,11 +248,11 @@
 #custom-arrow9 {
 	font-size: 14pt;
 	color: @sound;
-	background: transparent;
+	background: @base;
 }
 
 #custom-arrow10 {
 	font-size: 14pt;
-	color: @unfocused;
+	color: @base;
 	background: transparent;
 }
