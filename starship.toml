@@ -1,10 +1,12 @@
 format = """
+$sudo\
 $username\
 $directory\
 $git_branch\
 $git_status\
 $fill\
 $c\
+$cpp\
 $elixir\
 $elm\
 $golang\
@@ -15,7 +17,6 @@ $nodejs\
 $nim\
 $rust\
 $scala\
-$conda\
 $python\
 $time\n  \
 [󱞪](fg:iris) \
@@ -75,6 +76,12 @@ style = "bg:overlay fg:rose"
 time_format = "%I:%M%P"
 use_12hr = true
 
+[sudo]
+style = "bg:overlay fg:iris"
+format = "[](fg:overlay)[ $symbol ]($style)[](fg:overlay) "
+symbol = "󱡄 "
+disabled = false
+
 [username]
 disabled = false
 format = "[](fg:overlay)[  $user ]($style)[](fg:overlay) "
@@ -87,8 +94,16 @@ style_user = "bg:overlay fg:iris"
 [c]
 style = "bg:overlay fg:pine"
 format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay) "
+detect_extensions = ['c', 'h']
 disabled = false
 symbol = " "
+
+[cpp]
+style = "bg:overlay fg:pine"
+format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay) "
+detect_extensions = ['cpp', 'hpp']
+disabled = false
+symbol = " "
 
 [elixir]
 style = "bg:overlay fg:pine"
@@ -105,6 +120,8 @@ symbol = " "
 [golang]
 style = "bg:overlay fg:pine"
 format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay) "
+detect_extensions = ['go']
+detect_files = ['go.mod', 'go.sum', 'go.work', 'glide.yaml', 'Gopkg.yml', 'Gopkg.lock', '.go-version']
 disabled = false
 symbol = " "
 
@@ -113,6 +130,13 @@ style = "bg:overlay fg:pine"
 format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay) "
 disabled = false
 symbol = " "
+
+[lua]
+style = "bg:overlay fg:pine"
+format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay) "
+detect_extensions = ['lua']
+disabled = false
+symbol = " "
 
 [java]
 style = "bg:overlay fg:pine"
@@ -141,6 +165,8 @@ symbol = "󰆥 "
 [rust]
 style = "bg:overlay fg:pine"
 format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay) "
+detect_extensions = ['rs']
+detect_files = ['cargo.toml']
 disabled = false
 symbol = ""
 
@@ -153,11 +179,7 @@ symbol = " "
 [python]
 style = "bg:overlay fg:pine"
 format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay) "
+detect_extensions = ['py']
+detect_files = ['.python-version', 'Pipfile', '__init__.py', 'pyproject.toml', 'requirements.txt', 'setup.py', 'tox.ini', 'pixi.toml']
 disabled = false
 symbol = ' '
-
-[conda]
-style = "bg:overlay fg:pine"
-format = "[](fg:overlay)[$symbol$environment]($style)[](fg:overlay) "
-disabled = false
-symbol = '🅒 '
