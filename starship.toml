@@ -6,7 +6,7 @@ $git_branch\
 $git_status\
 $fill\
 $c\
-$cpp\
+$custom\
 $elixir\
 $elm\
 $golang\
@@ -84,7 +84,7 @@ disabled = false
 
 [username]
 disabled = false
-format = "[](fg:overlay)[  $user ]($style)[](fg:overlay) "
+format = "[](fg:overlay)[ 󰣇 $user ]($style)[](fg:overlay) "
 show_always = true
 style_root = "bg:overlay fg:iris"
 style_user = "bg:overlay fg:iris"
@@ -98,7 +98,7 @@ detect_extensions = ['c', 'h']
 disabled = false
 symbol = " "
 
-[cpp]
+[custom.cpp]
 style = "bg:overlay fg:pine"
 format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay) "
 detect_extensions = ['cpp', 'hpp']
