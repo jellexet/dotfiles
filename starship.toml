@@ -34,10 +34,13 @@ foam = '#9ccfd8'
 iris = '#c4a7e7'
 
 [directory]
-format = "[](fg:overlay)[ $path ]($style)[](fg:overlay) "
+format = "[](fg:overlay)[$read_only]($read_only_style)[ $path ]($style)[](fg:overlay) "
+read_only = " "
+read_only_style = "bg:overlay fg:love"
 style = "bg:overlay fg:pine"
 truncation_length = 3
 truncation_symbol = "…/"
+disabled = false
 
 [directory.substitutions]
 Documents = "󰈙"
@@ -80,7 +83,7 @@ use_12hr = true
 style = "bg:overlay fg:iris"
 format = "[](fg:overlay)[ $symbol ]($style)[](fg:overlay) "
 symbol = "󱡄 "
-disabled = false
+disabled = true 
 
 [username]
 disabled = false
