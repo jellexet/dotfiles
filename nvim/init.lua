@@ -1,4 +1,11 @@
 -- init.lua
+
+-- 4 spaces TAB
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.softtabstop = 4
+
 -- Install lazy.nvim (plugin manager) if not installed
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
