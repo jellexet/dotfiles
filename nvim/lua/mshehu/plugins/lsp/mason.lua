@@ -29,9 +29,11 @@ return {
 				"clangd",
 				"gopls",
 				"lua_ls",
-				--"hls", this is for Haskell
+				"hls", -- this requires ghcup installed: curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | bash
 				"rust_analyzer",
+				"bashls",
 			},
+			automatic_installation = true,
 		})
 
 		mason_tool_installer.setup({
