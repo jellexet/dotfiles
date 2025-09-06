@@ -89,19 +89,19 @@
 
   "custom/lock":{
     "format": " 󰌾 |",
-    "on-click": "swaylock && sleep 3 && sudo zzz -z",
+    "on-click": "swaymsg exec swaylock",
     "tooltip": false
   },
 
   "custom/power": {
 		"format": "   ",
-		"on-click": "$HOME/.config/waybar/scripts/power.sh",
+		"on-click": "sudo poweroff",
     "tooltip": false
   },
 
   "custom/reboot":{
     "format": "  |",
-    "on-clock": "reboot",
+    "on-click": "sudo reboot",
     "tooltip": false
   },
 
