@@ -75,7 +75,8 @@ output * bg /usr/share/backgrounds/gnome/blobs-l.svg fill
 
     # Kill focused window
     bindsym $mod+Shift+q kill
-
+    bindsym Alt+F4 kill
+ 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
