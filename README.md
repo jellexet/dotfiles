@@ -15,3 +15,9 @@ Also there is a direcotory with wallpapers for the desktop and the greeter.
 
 When using proprietary drivers remember to run Sway with `--unsupported-gpu` flag.
 Go to `/usr/share/wayland-sessions/sway.desktop` and add the flag to the `Exec` line.
+
+To have a complete sway setup:
+
+```sh
+sudo pacman -S sway swaybg swaylock waybar wofi autotiling-rs
+```
