@@ -23,7 +23,7 @@ set $menu wofi --show drun --hide-scroll
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/gnome/blobs-l.svg fill
+output * bg /usr/share/backgrounds/gnome/drool-l.svg fill
 #
 # Example configuration:
 #
@@ -48,12 +48,12 @@ output * bg /usr/share/backgrounds/gnome/blobs-l.svg fill
 #
 # Example configuration:
 #
-#   input type:touchpad {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
+   input type:touchpad {
+       dwt enabled
+       tap enabled
+       natural_scroll enabled
+       middle_emulation enabled
+   }
 #
    input type:keyboard {
        xkb_layout "us"
