@@ -95,13 +95,13 @@
 
   "custom/power": {
 		"format": "   ",
-		"on-click": "sudo poweroff",
+		"on-click": "poweroff",
     "tooltip": false
   },
 
   "custom/reboot":{
     "format": "  |",
-    "on-click": "sudo reboot",
+    "on-click": "reboot",
     "tooltip": false
   },
 
