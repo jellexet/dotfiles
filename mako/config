@@ -5,6 +5,8 @@ progress-color=over #31748f
 default-timeout=8000
 font=Adwaita 11
 border-radius=10
+default-timeout=2000
+history=1
 
 [urgency=high]
 border-color=#eb6f92
