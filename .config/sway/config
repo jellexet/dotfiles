@@ -5,7 +5,7 @@
 # Read `man 5 sway` for a complete reference.
 
 exec_always autotiling-rs
-exec_always mako
+# exec_always mako  # Sway should auto-run mako by default
 
 ### Variables
 #
