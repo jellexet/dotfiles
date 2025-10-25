@@ -5,6 +5,7 @@
 # Read `man 5 sway` for a complete reference.
 
 exec_always autotiling-rs
+exec_always mako
 
 ### Variables
 #
