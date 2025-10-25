@@ -10,3 +10,7 @@ history=1
 
 [urgency=high]
 border-color=#eb6f92
+
+[app-name=Spotify]
+border-color=#1ED760
+background-color=#121212
