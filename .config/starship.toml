@@ -6,7 +6,7 @@ $git_branch\
 $git_status\
 $fill\
 $c\
-$custom\
+$cpp\
 $elixir\
 $elm\
 $golang\
@@ -101,10 +101,10 @@ detect_extensions = ['c', 'h']
 disabled = false
 symbol = " "
 
-[custom.cpp]
+[cpp]
 style = "bg:overlay fg:pine"
 format = "[](fg:overlay)[$symbol$version]($style)[](fg:overlay) "
-detect_extensions = ['cpp', 'hpp']
+detect_extensions = ['cpp','cc','cxx','c++', 'C', 'CPP', 'hpp']
 disabled = false
 symbol = " "
 
