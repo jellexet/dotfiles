@@ -33,7 +33,7 @@
   },
 
   "clock": {
-    "format": " {:%H:%M %Z  󰸗 %a %Y-%m-%d}",
+    "format": " {:%H:%M %Z  󰸗 %a %d-%m-%Y}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "mode"          : "year",
@@ -221,7 +221,7 @@
       "(.*Armcord).*": "󰙯 $1",
       "(.*Brave).*": " $1",
       "(.*KeePassXC).*": "󰯄 $1",
-      "(.*foot).*": "  $1",
+      "(.*Alacritty).*": "  $1",
       "(.*Mozilla Firefox).*": "  $1",
       "(.*Network Connections).*": "󰈀  $1",
       "(.*Signal).*": "󰚢 $1",
