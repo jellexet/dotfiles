@@ -6,7 +6,7 @@ default-timeout=8000
 font=Adwaita 11
 border-radius=10
 ignore-timeout=1
-default-timeout=3000
+default-timeout=5000
 history=1
 anchor=top-center
 
