@@ -24,7 +24,7 @@ set $menu wofi --show drun --hide-scroll
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/gnome/drool-l.svg fill
+output * bg /usr/share/backgrounds/gnome/blobs-l.svg fill
 #
 # Example configuration:
 #
