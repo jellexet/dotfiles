@@ -31,26 +31,19 @@ TOOLTIP='Sway Keybinds:\n'\
 '  $mod+b → splith\n'\
 '  $mod+v → splitv\n'\
 '  $mod+e → layout toggle split\n'\
-'  $mod+Shift+f → fullscreen\n'\
+'  $mod+f → fullscreen\n'\
 '  $mod+Shift+space → floating toggle\n'\
 '  $mod+space → focus mode_toggle\n'\
 '  $mod+Shift+a → focus parent\n'\
 '  $mod+Shift+minus → move scratchpad\n'\
 'Applications:\n'\
-'  $mod+Return → exec $term\n'\
-'  $mod+d → exec $menu\n'\
-'  $mod+f → exec firefox\n'\
-'  $mod+Alt+l → exec swaylock\n'\
-'  $mod+Shift+e → exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'\n'\
-'  --locked → XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle\n'\
-'  --locked → XF86AudioLowerVolume exec pactl set-sink-volume \@DEFAULT_SINK@ -5%\n'\
-'  --locked → XF86AudioRaiseVolume exec pactl set-sink-volume \@DEFAULT_SINK@ +5%\n'\
-'  --locked → XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ toggle\n'\
-'  --locked → XF86MonBrightnessDown exec brightnessctl set 5%-\n'\
-'  --locked → XF86MonBrightnessUp exec brightnessctl set 5%+\n'\
-'  Print → exec grim\n'\
+'  $mod+Return → Alacritty\n'\
+'  $mod+d → Wofi\n'\
+'  $mod+Shift+f → Firefox\n'\
+'  $mod+Alt+l → Swaylock\n'\
+'  $mod+Shift+e → exit Sway\n'\
 'System:\n'\
-'  $mod+Shift+c → reload\n'\
+'  $mod+Shift+c → reload Sway config\n'\
 'Workspaces:\n'\
 '  $mod+1 → workspace number 1\n'\
 '  $mod+2 → workspace number 2\n'\
@@ -79,3 +72,5 @@ TOOLTIP='Sway Keybinds:\n'\
 '  Return → mode "default"\n'\
 '  Escape → mode "default"\n'\
 '  $mod+r → mode "resize"\n'
+
+printf '{"tooltip": "%s"}' "$TOOLTIP"
