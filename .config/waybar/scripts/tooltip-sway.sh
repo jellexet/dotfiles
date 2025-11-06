@@ -69,8 +69,8 @@ TOOLTIP='Sway Keybinds:\n'\
 '  Down → resize grow height 10px\n'\
 '  Up → resize shrink height 10px\n'\
 '  Right → resize grow width 10px\n'\
-'  Return → mode "default"\n'\
-'  Escape → mode "default"\n'\
-'  $mod+r → mode "resize"\n'
+'  Return → mode \"default\"\n'\
+'  Escape → mode \"default\"\n'\
+'  $mod+r → mode \"resize\"\n'
 
 printf '{"tooltip": "%s"}' "$TOOLTIP"
