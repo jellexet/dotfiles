@@ -91,6 +91,67 @@ return {
 					})
 				end,
 
+				["clangd"] = function()
+					-- Define your clangd-specific options
+					local clangd_opts = {
+						keys = {
+							{
+								"<leader>ch",
+								"<cmd>LspClangdSwitchSourceHeader<cr>",
+								desc = "Switch Source/Header (C/C++)",
+							},
+						},
+						root_markers = {
+							"compile_commands.json",
+							"compile_flags.txt",
+							"configure.ac", -- AutoTools
+							"Makefile",
+							"configure.ac",
+							"configure.in",
+							"config.h.in",
+							"meson.build",
+							"meson_options.txt",
+							"build.ninja",
+							".git",
+						},
+						capabilities = {
+							offsetEncoding = { "utf-16" },
+						},
+						cmd = {
+							"clangd",
+							"--background-index",
+							"--clang-tidy",
+							"--header-insertion=iwyu",
+							"--completion-style=detailed",
+							"--function-arg-placeholders",
+							"--fallback-style=llvm",
+						},
+						init_options = {
+							usePlaceholders = true,
+							completeUnimported = true,
+							clangdFileStatus = true,
+						},
+					}
+
+					-- Merge the default capabilities into your clangd options
+					clangd_opts.capabilities =
+						vim.tbl_deep_extend("force", capabilities, clangd_opts.capabilities or {})
+
+					-- Setup clangd with the merged options
+					lspconfig["clangd"].setup(clangd_opts)
+
+					-- Setup clangd_extensions
+					-- This safely tries to load clangd_extensions.nvim config
+					-- Assumes you are using lazy.nvim
+					pcall(function()
+						-- Get opts from clangd_extensions.nvim plugin spec
+						local clangd_ext_opts = require("lazy").opts("clangd_extensions.nvim")
+						require("clangd_extensions").setup(
+							vim.tbl_deep_extend("force", clangd_ext_opts or {}, { server = clangd_opts })
+						)
+					end)
+				end,
+
 				["lua_ls"] = function()
 					-- configure lua server (with special settings)
 					lspconfig["lua_ls"].setup({

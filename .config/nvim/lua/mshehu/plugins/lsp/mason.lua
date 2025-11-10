@@ -42,6 +42,7 @@ return {
 				"isort", -- python formatter
 				"black", -- python formatter
 				"pylint", -- python linter
+				"codelldb", -- C/C++ debugger
 			},
 		})
 	end,
