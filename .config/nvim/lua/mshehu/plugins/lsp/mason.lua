@@ -26,23 +26,25 @@ return {
 		mason_lspconfig.setup({
 			-- list of servers for mason to install
 			ensure_installed = {
+				"bashls",
 				"clangd",
 				"gopls",
-				"lua_ls",
 				"hls", -- this requires ghcup installed: curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | bash
+				"lua_ls",
 				"rust_analyzer",
-				"bashls",
 			},
 			automatic_installation = true,
 		})
 
 		mason_tool_installer.setup({
 			ensure_installed = {
-				"stylua", -- lua formatter
-				"isort", -- python formatter
 				"black", -- python formatter
-				"pylint", -- python linter
+				"cmakelang",
+				"cmakelint", -- CMake linter
 				"codelldb", -- C/C++ debugger
+				"isort", -- python formatter
+				"pylint", -- python linter
+				"stylua", -- lua formatter
 			},
 		})
 	end,
