@@ -9,7 +9,7 @@ opt.number = true
 opt.tabstop = 4 -- 4 spaces for tabs
 opt.shiftwidth = 4 -- 4 spaces for indentation width
 opt.expandtab = true -- expand tabs to spaces
-opt.autoindent = true -- copy indentation from current line when starting a new one 
+opt.autoindent = true -- copy indentation from current line when starting a new one
 
 opt.wrap = false
 
@@ -31,16 +31,16 @@ opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or 
 -- clipboard
 -- opt.clipboard:append("unamedplus") -- use system clipboard as default register
 vim.g.clipboard = {
-  name = "wl-clipboard",
-  copy = {
-    ["+"] = "wl-copy --foreground --type text/plain",
-    ["*"] = "wl-copy --foreground --primary --type text/plain",
-  },
-  paste = {
-    ["+"] = "wl-paste --no-newline",
-    ["*"] = "wl-paste --no-newline --primary",
-  },
-  cache_enabled = true,
+	name = "wl-clipboard",
+	copy = {
+		["+"] = "wl-copy --foreground --type text/plain",
+		["*"] = "wl-copy --foreground --primary --type text/plain",
+	},
+	paste = {
+		["+"] = "wl-paste --no-newline",
+		["*"] = "wl-paste --no-newline --primary",
+	},
+	cache_enabled = true,
 } -- use wl-clipboard as default
 
 -- split windows

@@ -44,6 +44,7 @@ return {
 				"codelldb", -- C/C++ debugger
 				"isort", -- python formatter
 				"pylint", -- python linter
+				"shfmt", -- bash formatter
 				"stylua", -- lua formatter
 			},
 		})
