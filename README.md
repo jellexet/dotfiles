@@ -24,7 +24,7 @@ Go to `/usr/share/wayland-sessions/sway.desktop` and add the flag to the `Exec` 
 To have a complete sway setup:
 
 ```sh
-sudo pacman -S sway swaybg swaylock waybar wofi mako autotiling-rs brightnessctl gnome-backgrounds
+sudo pacman -S sway swaybg swaylock waybar wofi mako autotiling-rs brightnessctl gnome-backgrounds grim
 ```
 
 ### Starship
