@@ -19,6 +19,7 @@ zstyle :compinstall filename '/home/mshehu/.zshrc'
 CASE_SENSITIVE="true"
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
+# Preserve case when completing SSH
 #----------------------------------------------------------------------------------
 h=()
 if [[ -r ~/.ssh/config ]]; then
