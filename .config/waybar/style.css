@@ -30,7 +30,7 @@ window#waybar {
 }
 /*-----modules indv----*/
 #window {
-	background: @blue;
+	background: @iris;
   color: @black0;
   margin: 5px 5px 5px 0px;
   padding: 0px 6px 0px 6px;
@@ -46,21 +46,24 @@ window#waybar {
   padding: 0px 7px 0px 7px;
 }
 #workspaces button:hover {
-	background: @purple;
+	background: @iris;
   color: @black0;
 }
 #workspaces button.focused {
-	background: @orange;
+	background: @gold;
   color: @black0;
 }
 #backlight {
   padding: 0px 10px 0px 0px;
 }
 #battery {
-  color: @green;
+  color: @pine;
   padding: 0px 10px 0px 0px;
 }
 #clock {
+    background: @foam;
+    color: @black0;
+  margin: 5px 5px 5px 5px;
   padding: 0px 10px 0px 6px;
 }
 #clock.utc {
@@ -80,7 +83,7 @@ window#waybar {
 }
 #custom-power {
   color: @black0;
-  background: @red;
+  background: @love;
   margin: 5px 5px 5px 5px;
   padding: 1px 1px 1px 6px;
 }
@@ -112,19 +115,19 @@ window#waybar {
 }
 /*-----Indicators----*/
 #keyboard-state label.locked {
-  color: @green;
+  color: @pine;
 }
 #pulseaudio.muted {
-  color: @red;
+  color: @love;
 }
 #battery.charging #battery.plugged {
-  color: @green;
+  color: @pine;
 }
 #battery.warning:not(.charging) {
-	color: @yellow;
+	color: @gold;
 }
 #battery.critical:not(.charging) {
-  color: #CC3436; /*keep red*/
+  color: #CC3436; /*keep love*/
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
