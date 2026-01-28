@@ -74,7 +74,7 @@ output * bg /usr/share/backgrounds/gnome/blobs-l.svg fill
     # Start your launcher
     bindsym $mod+d exec $menu
     # Start Firefox
-    bindsym $mod+Shift+f exec firefox
+    bindsym $mod+f exec firefox
 
     # Kill focused window
     bindsym $mod+w kill
@@ -161,7 +161,7 @@ output * bg /usr/share/backgrounds/gnome/blobs-l.svg fill
     bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
-    bindsym $mod+f fullscreen
+    bindsym $mod+Shift+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+Shift+space floating toggle
