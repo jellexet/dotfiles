@@ -58,10 +58,9 @@ alias man='batman'
 # GOBIN
 export PATH="$HOME/.local/share/go/bin:$PATH"
 
-# ghcup
-[ -f "/home/mshehu/.ghcup/env" ] && . "/home/mshehu/.ghcup/env" # ghcup-env
-
 # evals
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+[ -f "/home/mshehu/.ghcup/env" ] && . "/home/mshehu/.ghcup/env" # ghcup-env
