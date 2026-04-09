@@ -9,6 +9,7 @@ return {
                 "gopls",
                 "hls", -- this requires ghcup installed: curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | bash
                 "lua_ls",
+                "ocamllsp",
                 "pylsp",
                 "rust_analyzer",
             },

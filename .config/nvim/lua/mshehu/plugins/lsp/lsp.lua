@@ -37,6 +37,7 @@ return {
             "gopls",
             "hls",
             "lua_ls",
+            "ocamllsp",
             "pylsp",
             "rust_analyzer",
         })
