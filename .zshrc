@@ -1,7 +1,7 @@
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=100000
+SAVEHIST=100000
 setopt APPEND_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_DUPS
@@ -40,6 +40,7 @@ autoload -U colors && colors
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias ll='ls -alF'
+alias hx='helix'
 
 # BAT aliases and functions
 # can use "help command" to show a colorized help printout
