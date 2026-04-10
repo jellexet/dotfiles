@@ -1,1 +1,17 @@
 theme = "rose_pine"
+
+[editor]
+line-number = "relative"
+gutters = ["diff"]
+auto-format = true
+text-width = 120
+
+[keys.normal]
+C-h = "jump_view_left"
+C-l = "jump_view_right"
+C-j = "jump_view_down"
+C-k = "jump_view_up"
+
+[keys.select]
+u = "switch_to_lowercase"
+U = "switch_to_uppercase"
