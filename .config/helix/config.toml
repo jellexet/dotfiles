@@ -2,7 +2,7 @@ theme = "rose_pine"
 
 [editor]
 line-number = "relative"
-gutters = ["diff"]
+bufferline = "always"
 auto-format = true
 text-width = 120
 
@@ -11,6 +11,8 @@ C-h = "jump_view_left"
 C-l = "jump_view_right"
 C-j = "jump_view_down"
 C-k = "jump_view_up"
+C-pageup = "goto_previous_buffer"
+C-pagedown = "goto_next_buffer"
 
 [keys.select]
 u = "switch_to_lowercase"
