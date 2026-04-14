@@ -6,7 +6,7 @@ bufferline = "always"
 auto-format = true
 text-width = 120
 
-[editor.cursorshape]
+[editor.cursor-shape]
 insert = "bar"
 
 [keys.normal]
