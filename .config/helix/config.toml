@@ -6,6 +6,9 @@ bufferline = "always"
 auto-format = true
 text-width = 120
 
+[editor.cursorshape]
+insert = "bar"
+
 [keys.normal]
 C-h = "jump_view_left"
 C-l = "jump_view_right"
