@@ -32,6 +32,9 @@ HISTSIZE=100000
 HISTFILESIZE=100000
 shopt -s histappend
 
+# hgrep <argument> returns all commands in history that match the argument
+hgrep () { fc -lim "*$@*" 1 }
+
 #ghcup configuration
 [ -f "/home/mshehu/.ghcup/env" ] && . "/home/mshehu/.ghcup/env" # ghcup-env
 #opam configuration
