@@ -13,6 +13,9 @@ setopt HIST_FIND_NO_DUPS
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 
+# hgrep <argument> returns all commands in history that match the argument
+hgrep () { fc -lim "*$@*" 1 }
+
 zstyle :compinstall filename '/home/mshehu/.zshrc'
 
 # Force Zsh to preserve case for all completions
