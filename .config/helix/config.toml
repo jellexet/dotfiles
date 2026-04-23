@@ -21,7 +21,7 @@ C-k = "jump_view_up"
 C-pageup = "goto_previous_buffer"
 C-pagedown = "goto_next_buffer"
 G = "goto_last_line"
-F5 = ":pipe sed 's/[[:space:]]*$//'"
+"*" = ["move_prev_word_start", "move_next_word_end", "search_selection_detect_word_boundaries"]
 
 [keys.select]
 u = "switch_to_lowercase"
