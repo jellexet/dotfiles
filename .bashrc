@@ -8,7 +8,7 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias ll='ls -alF'
-alias hx='helix'
+command -v helix &>/dev/null && alias hx='helix'
 
 # BAT aliases and functions
 # can use "help command" to show a colorized help printout
@@ -18,8 +18,6 @@ help() {
 }
 
 # override -h and --help with bat
-alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
-alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 alias man='batman'
 
 PS1='[\u@\h \W]\$ '
@@ -33,9 +31,4 @@ HISTFILESIZE=100000
 shopt -s histappend
 
 # hgrep <argument> returns all commands in history that match the argument
-hgrep () { fc -lim "*$@*" 1 }
-
-#ghcup configuration
-[ -f "/home/mshehu/.ghcup/env" ] && . "/home/mshehu/.ghcup/env" # ghcup-env
-#opam configuration
-[[ ! -r '/home/mshehu/.opam/opam-init/init.sh' ]] || source '/home/mshehu/.opam/opam-init/init.sh' > /dev/null 2> /dev/null
+hgrep() { history | grep -i "$@"; }
