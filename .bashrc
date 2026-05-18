@@ -32,3 +32,10 @@ shopt -s histappend
 
 # hgrep <argument> returns all commands in history that match the argument
 hgrep() { history | grep -i "$@"; }
+
+#ghcup configuration
+[ -f "/home/mshehu/.ghcup/env" ] && . "/home/mshehu/.ghcup/env" # ghcup-env
+#opam configuration
+[[ ! -r '/home/mshehu/.opam/opam-init/init.sh' ]] || source '/home/mshehu/.opam/opam-init/init.sh' > /dev/null 2> /dev/null
+#cargo
+export PATH="$PATH:/home/mshehu/.cargo/bin"
