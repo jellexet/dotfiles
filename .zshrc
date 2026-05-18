@@ -43,7 +43,7 @@ autoload -U colors && colors
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias ll='ls -alF'
-alias hx='helix'
+(( $+commands[helix] )) && alias hx='helix'
 
 # BAT aliases and functions
 # can use "help command" to show a colorized help printout
