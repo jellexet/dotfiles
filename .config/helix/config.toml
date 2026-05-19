@@ -3,6 +3,8 @@ theme = "rose_pine"
 [editor]
 line-number = "relative"
 bufferline = "always"
+indent-heuristic = "hybrid"
+cursorline = true
 auto-format = true
 text-width = 120
 
@@ -10,7 +12,7 @@ text-width = 120
 insert = "bar"
 
 [editor.inline-diagnostics]
-cursor-line = "warning"
+cursor-line = "hint"
 other-lines = "disable"
 
 [keys.normal]
