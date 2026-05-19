@@ -77,3 +77,5 @@ source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # This section can be safely removed at any time if needed.
 [[ ! -r '/home/mshehu/.opam/opam-init/init.zsh' ]] || source '/home/mshehu/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
 # END opam configuration
+#Cargo
+export PATH="$PATH:/home/mshehu/.cargo/bin"
