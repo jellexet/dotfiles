@@ -1,0 +1,9 @@
+# Theme
+theme = Rose Pine
+
+# Font
+font-family = "Fira Code"
+font-size = 12
+
+# Terminal
+background-opacity = 0.8 
