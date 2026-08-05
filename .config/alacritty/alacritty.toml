@@ -64,3 +64,10 @@ blur = true
 [window.padding]
 x = 10
 y = 10
+
+[cursor.style]
+shape = "Underline"
+blinking = "On"
+
+[terminal]
+shell = "/bin/zsh" 
