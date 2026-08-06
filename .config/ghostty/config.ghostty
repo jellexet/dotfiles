@@ -1,9 +1,11 @@
 # Theme
-theme = Rose Pine
+# theme = Rose Pine
 
 # Font
-font-family = "Fira Code"
+font-family = "Fira Mono"
 font-size = 12
 
 # Terminal
-background-opacity = 0.8 
+background-opacity = 0.8
+background-blur = true
+copy-on-select = true
