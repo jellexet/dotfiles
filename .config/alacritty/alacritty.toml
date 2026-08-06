@@ -42,15 +42,18 @@ mods = "Control|Shift"
 size = 12
 
 [font.bold]
-family = "Source Code Pro"
+# family = "Source Code Pro"
+family = "Fira Mono"
 style = "Bold"
 
 [font.italic]
-family = "Source Code Pro"
+# family = "Source Code Pro"
+family = "Fira Mono"
 style = "Italic"
 
 [font.normal]
-family = "Source Code Pro"
+# family = "Source Code Pro"
+family = "Fira Mono"
 style = "Regular"
 
 [window]
