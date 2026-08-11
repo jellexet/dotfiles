@@ -16,6 +16,9 @@ insert = "bar"
 cursor-line = "hint"
 other-lines = "disable"
 
+[editor.soft-wrap]
+enable = true
+
 [keys.normal]
 C-h = "jump_view_left"
 C-l = "jump_view_right"
