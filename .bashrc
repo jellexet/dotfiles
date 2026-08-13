@@ -26,8 +26,8 @@ eval "$(starship init bash)"
 eval "$(zoxide init bash)"
 
 HISTCONTROL=ignoreboth:erasedups
-HISTSIZE=100000
-HISTFILESIZE=100000
+HISTSIZE=10000
+HISTFILESIZE=1000000
 shopt -s histappend
 
 # hgrep <argument> returns all commands in history that match the argument
