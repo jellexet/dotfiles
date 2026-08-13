@@ -1,0 +1,62 @@
+[language-server.rust-analyzer.config.check]
+features = "all"
+command = "clippy"
+
+[[language]]
+name = "rust"
+auto-format = true
+
+[[language]]
+name = "go"
+auto-format = true
+
+[[language]]
+name = "cpp"
+scope = "source.cpp"
+injection-regex = "cpp"
+file-types = ["cc", "hh", "c++", "cpp", "hpp", "h", "ipp", "tpp", "cxx", "hxx", "ixx", "txx", "ino", "C", "H", "cu", "cuh", "cppm", "h++", "ii", "inl", { glob = ".hpp.in" }, { glob = ".h.in" }]
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+language-servers = [ "clangd" ]
+indent = { tab-width = 4, unit = "    " }
+formatter = { command = "clang-format", args = ["--assume-filename=%{buffer_name}"] }
+auto-format = true
+
+[[language]]
+name = "c"
+scope = "source.c"
+file-types = ["c", "h", "C", "H"]
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+language-servers = ["clangd"]
+indent = { tab-width = 4, unit = "    " }
+formatter = { command = "clang-format", args = ["--assume-filename=%{buffer_name}"] }
+auto-format = true
+
+[[language]]
+name = "ocaml"
+scope = "source.ocaml"
+injection-regex = "ocaml"
+file-types = ["ml", "mli"]
+shebangs = ["ocaml", "ocamlrun", "ocamlscript"]
+block-comment-tokens = { start = "(*", end = "*)" }
+language-servers = [ "ocamllsp" ]
+indent = { tab-width = 2, unit = "  " }
+formatter = { command = "ocamlformat", args = ["-"] }
+auto-format = true
+
+[[language]]
+name = "dune"
+scope = "source.dune"
+roots = ["dune-project"]
+file-types = [{ glob = "dune-project" }, { glob = "dune" }]
+comment-token = ";"
+indent = { tab-width = 1, unit = " " }
+grammar = "scheme"
+auto-format = true
+formatter = { command = "dune", args = ["format-dune-file"] }
+
+[[language]]
+name = "python"
+formatter = { command = "black", args = ["-"] }
+auto-format = true
